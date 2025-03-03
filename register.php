@@ -47,7 +47,6 @@ if (isset($_POST['txtEmailAddress'])) {
 			</div>
         </form>
     </div>
-    
 </body>
 
 <?php include ($_SERVER["DOCUMENT_ROOT"] . '/' . $sett_data['directory'] . '/include/global-js.php'); ?>
