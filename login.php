@@ -44,7 +44,7 @@ if (isset($_POST['txtEmailAddress'])) {
 				<button type="submit" class="btn btn-primary w-100">Login</button>
 			</div>
 			<div class="mb-3">
-				<a href="register.php" class="btn btn-secondary w-100">Register</a>
+				<a href="register" class="btn btn-secondary w-100">Register</a>
 			</div>
 			
         </form>

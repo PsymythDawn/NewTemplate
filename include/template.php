@@ -17,8 +17,9 @@ if (!defined('WEB_ROOT')) {
 
 	<meta name="author" content="themesflat.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+
 	<?php include ($_SERVER["DOCUMENT_ROOT"] . '/' . $sett_data['directory'] . '/include/global-css.php'); ?>
+
 
 </head>
 

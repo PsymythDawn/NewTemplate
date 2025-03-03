@@ -30,11 +30,10 @@ function register_data()
 	$chk->execute();
 	if($chk->rowCount() > 0)
 	{
-
+        
 		header("Location: index.php");
 
 	} else {
-
 		$passwordHash = password_hash($password, PASSWORD_DEFAULT);		
 
 		$sql = $conn->prepare("INSERT INTO bs_user (email, password, date_added, is_deleted)
