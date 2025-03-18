@@ -2,7 +2,7 @@
 require_once 'global-library/database.php';
 require_once 'include/functions.php';
 
-$data = ["emailAddress" => null, "message" => null]; // Default structure
+$data = ["email" => null, "message" => null]; // Default structure
 
 
 if (isset($_POST['txtEmailAddress'])) {
@@ -22,38 +22,29 @@ if (isset($_POST['txtEmailAddress'])) {
 
 	<?php include ($_SERVER["DOCUMENT_ROOT"] . '/' . $sett_data['directory'] . '/include/global-css.php'); ?>
 
-    <title>Login</title>
+    <title>Register</title>
 
 </head>
-<body style="background: #af1607"> 
+<body style="background: #af1607">
     <div class="login-container">
-        <div class="d-flex">
-            <img src="./assets\css/SHOPAPP.png"/ style="height: 50px; border-radius: 11px;">
-            <h2 class="text-center mb-4">Login</h2>
-        </div>
-        
-        <form id="loginform" name="frmLogin" method="post">
+        <h2 class="text-center mb-4">Registration</h2>
+        <form id="loginform" action="<?php echo WEB_ROOT;?>register/process.php?action=register" method="post">
 			<div class="text-center text-danger mb-3">
 				<?php echo htmlspecialchars($data["message"]); ?>
 			</div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" name="txtEmailAddress" class="form-control" id="email" <?php echo htmlspecialchars($data["emailAddress"]); ?> placeholder="Enter email" required>
+                <input type="email" name="email_address" class="form-control" id="email" placeholder="Enter email" required>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" name="txtPassword" class="form-control" id="password" placeholder="Enter password" required>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Enter password" required>
             </div>
-            <div>
-                <h6 class="text-end mt-3 mb-3">Forgot Password</h6>
-            </div>
-			<div class="mb-3">
-				<button type="submit" class="btn btn-primary w-100">Login</button>
+            <button type="submit" class="btn btn-primary w-100">Register</button>
+
+            <div class="mb-3 text-center">
+				<a type="button" href="<?php echo WEB_ROOT;?>login.php">Back to login</a>
 			</div>
-			<div class="mb-3">
-				<a href="register" class="btn btn-secondary w-100">Register</a>
-			</div>
-			
         </form>
     </div>
     

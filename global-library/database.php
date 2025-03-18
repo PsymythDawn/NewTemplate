@@ -48,10 +48,10 @@ $sett_data = $sett->fetch();
 
 // setting up the web root and server root for this website application
 $thisFile = str_replace('\\', '/', __FILE__);
-$docRoot = '/APP/';
+$docRoot = '/NewTemplate/';
 
 $srvRoot  = str_replace('global-library/database.php', '', $thisFile);
-$webRoot  = '/APP/';
+$webRoot  = '/NewTemplate/';
 
 if (!defined('WEB_ROOT')) {
     define('WEB_ROOT', $webRoot);
