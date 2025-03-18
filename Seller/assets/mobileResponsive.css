@@ -1,0 +1,77 @@
+/* Mobile View*/
+@media screen and (max-width: 720px) {
+    /* Other Assets for mobile responsive */
+    .displayNone {
+        display: none;
+    }
+    .padding10px {
+        padding: 10px !important;
+    }
+
+    /* For HEADER */
+    .displayNoneAnchor {
+        display: inline;
+    }
+    #burgerIcon {
+        width: 36px;
+        height: 36px;
+        background-size: cover;
+        display: inline;
+        margin: 12px 12px 12px 0;
+    }
+    .SHOPTITLEDIV {
+        margin: 8px 0 8px 12px !important;
+    }
+    .headerDiv {
+        margin: 0 0 0 0;
+    }
+    .SaleLogo {
+        height: 45px;
+        border-radius: 12px;
+        margin: 0px 0px 0px 0;
+    }
+    .saleText {
+        font-size: 24px;
+        margin: 10px 0px 0px 5px !important;
+    }
+    .portalText {
+        font-size: 12px;
+        margin: 9px 0px 0px 10px !important;
+    }
+
+
+    /* For ASIDE */
+    .asideNav {
+        display: none;
+    }
+    
+
+    /* For MAIN SECTION */
+    .mainSection {
+        border: 2px solid red;
+        margin: 63px 0 0 0;
+        padding: 14px;
+        width: 100%;
+    }
+    .greetingAdmin {
+        font-size: 16px;
+        margin: 0 0 0 0;
+    }
+    .monthStat {
+        font-size: 12px;
+        margin: 4px 0 0 0;
+    }
+    .statusCards {
+        display: block;
+    }
+
+    .mobileResponsiveTable {
+        display: none;
+    }
+}
+/* To make sure mobile sidebar wont be visible in desktop view*/
+@media (min-width: 721px) {
+    /*.mobileSidebar {
+        display: none;
+    }*/
+}

@@ -1,0 +1,10 @@
+/* Mobile View*/
+@media screen and (max-width: 1280px) {
+    .mainSection {
+        width: 82%;
+        height: 100%;
+        margin: 110px 20px 0 223px;
+        position: absolute;
+        top: 0;
+    }
+}

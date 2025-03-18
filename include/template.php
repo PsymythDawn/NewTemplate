@@ -24,7 +24,7 @@ if (!defined('WEB_ROOT')) {
 </head>
 
 
-<body>
+<body style="background: #af1607">
     
     <?php include ($_SERVER["DOCUMENT_ROOT"] . '/' . $sett_data['directory'] . '/include/preload.php'); ?>
 

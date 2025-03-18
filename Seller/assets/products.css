@@ -1,0 +1,146 @@
+.contentDiv {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    background: #faf9f6;
+    padding: 25px;
+    border: 3px solid #5454547b;
+}
+.categoryNavContainer {
+    height: 40px;
+}
+.categoryNavContainer ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.categoryNavContainer ul li{
+   margin: 0px;
+   
+}
+.categoryNavContainer ul li a{
+    padding: 10px 10px 12px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.categoryNavContainer ul li a:hover{
+    background: #a19d9d7b;
+    color: #af1607;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+.productContainers {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+.productCardsRow {
+
+    width: 100%; 
+    height: auto;
+}
+.productCard { 
+    width: 300px;
+    height: auto;
+    margin: 0 20px 0 0;
+    background-color: #af160759;
+    border: 2px solid #af150744;
+    border-radius: 10px;
+}
+.productImg {
+    width: 100%;
+    height: auto;
+    display: flex;
+    border-radius: 10px 10px 0 0;
+    margin: 0px auto;
+}
+.productDetails {
+    margin: 20px 20px;
+    height: auto;
+}
+/*.prodtxtSize {
+    font-size: 20px;
+    margin: 0px 0px 0px 20px;
+}*/
+.formSection {
+    margin: 30px 100px;
+}
+.formRequired {
+    color: #c21808;
+    font-size: 26px;
+    font-weight: bolder;
+}
+.formLabels {
+    color: #545454;
+    font-weight: bold;
+    font-size: 20px;
+}
+.inputtextForm {
+    width: 30%;
+    height: 60px;
+    padding: 15px;
+    border-radius: 10px;
+    border: .5px solid #0000008c;
+}
+.inputtextForm:focus-visible {
+    outline: 2px solid #af1607;
+    border: 0px;
+}
+.selectForm {
+    width: 100%; 
+    height: 60px; 
+    padding: 10px; 
+    font-weight: 400; 
+    border-radius: 10px;
+}
+.selectForm:focus-within {
+    outline: 2px solid #af1607;
+    border: 0px;
+}
+.descriptionInputForm:focus-visible {
+    outline: 2px solid #af1607;
+    border: 0px;
+}
+.descriptionInputForm {
+    width: 30%;
+    height: 150px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.formMarginRight {
+    margin: 0 47% 0 0;
+}
+#imgDropArea {
+    text-align: center;
+    border-radius: 20px;
+}
+/*#imgDropArea #imgView:hover {
+    transition: .5s;
+    transform: scale(1);
+    border-radius: 20px;
+    background: #9c1509;
+    padding: 20px;
+}*/
+#imgView {
+    width: 156px;
+    height: 156px;
+    border: 3px dashed #817d7e;
+    background: #fff;
+}
+#imgView svg {
+    margin: 12.5% 39%;
+}
+
+#imgView span {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin: 15px 0 0 0;
+
+}
+
+
+

@@ -1,0 +1,35 @@
+* {
+    font-family: "Inter", sans-serif !important;
+}
+body {
+    background-color: #dfdfdf;
+}
+.af1607 {
+    color: #af1607;
+}
+/* Only on Mobile*/
+.displayNoneAnchor {
+    display: none;
+}
+#burgerIcon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    display: none;
+}
+
+/* Only on Mobile*/
+
+.mainSection {
+    width: 82%;
+    height: 100%;
+    margin: 110px 20px 0 325px;
+    position: absolute;
+    top: 0;
+}
+.mainAdminGreeting { 
+    width: 100%; 
+}
+.divBorder {
+    border: 3px solid #5454547b;
+}
