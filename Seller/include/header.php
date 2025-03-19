@@ -17,7 +17,7 @@
             }
             .headerDiv {
                 display: flex;
-                margin: 20px 0px 12px 0px;
+                margin: 12px 0px 10px 20px;
             }
             .SHOPTITLEDIV {
                 font-family: sans-serif;
@@ -26,36 +26,50 @@
             .SaleLogo {
                 height: 50px;
                 border-radius: 12px;
-                margin: 0px 20px 0px 0;
+                margin: 0px 5px 0px 0;
+            }
+            #headerSearchbar {
+                width: 350px;
+                height: 40px;
+                margin: 1% 0 0 0px;
+                border: 2px solid rgba(175, 21, 7, 0.34);
             }
             .userLink {
                 text-decoration: none;
                 color: #545454;
                 font-size: 18px;
+                padding: 8px 0 0 0;
             }
             .userLink:hover {
                 text-decoration: none;
                 font-weight: bold;
                 color: #af1607;
             }
+            .sellerName {
+                margin: 0;
+                font-size: 14px;
+                height: 20px;
+            }
+            
         </style>
     </head>
     <body>
         <header class="d-flex justify-content-between">
-            <div class="SHOPTITLEDIV headerDiv ms-4">
+            <div class="SHOPTITLEDIV headerDiv">
                 <img src="../assets\css/SHOPAPP.png" class="SaleLogo"/>
                 <h2 class="mt-2 fw-bold saleText" style="color: #af1607">SALE</h2>
-                <h6 class="fw-bold ms-2 text-center mt-2 mb-0 portalText">Seller Portal</h6>
+                <h6 class="fw-bold ms-3 text-center mt-2 mb-0 portalText">Seller Portal</h6>
             </div>
-            <div class="headerDiv me-5">
+            <div class="headerDiv me-3">
                 <div>
-                    <input type="text" class="form-control me-3 pt-2" placeholder="Search" style="width: 400px; height: 50px; border: 2px solid rgba(175, 21, 7, 0.34)"/>
+                    <input type="text" class="form-control me-3 " id="headerSearchbar" placeholder="Search"/>
                 </div>
-                <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" style="height: 50px;" class="me-2" />
-                <div class="btn-group">
-                            
-                    <a class="mt-3 fw-bold d-flex dropdown-toggle userLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        HellowSeller
+                
+                <div class="btn-group pt-1">
+                    
+                    <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" style="height: 40px;" class="me-1" data-bs-toggle="dropdown" />
+                    <a class="fw-bold d-flex dropdown-toggle userLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <p class="sellerName">HellowSeller</p>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#"><img src=""/>Profile</a></li>

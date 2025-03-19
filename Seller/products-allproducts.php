@@ -58,19 +58,7 @@
                 </div>
 
                 <?php
-                    include 'actions/conn.php';
-                    $selectProducts = "SELECT * FROM `products`";
-                    $resultselectProducts = mysqli_query($conn, $selectProducts);
-                    if (mysqli_num_rows($resultselectProducts) > 0) {
-                        $row = mysqli_fetch_assoc($resultselectProducts);
-                            $id = $row['product_id'];
-                            //$productIMG = $row['prod_img'];
-                            $productName = $row['product_name'];
-                            $productCategory = $row['product_category'];
-                            $productDescription = $row['product_description'];
-                            $productPrice = $row['product_price'];
-                            $productStocks = $row['product_stocks'];
-                    }
+                    include 'actions/action-viewproducts.php';
                 ?>
 
                 <div class="productContainers">
@@ -82,8 +70,8 @@
                             <img class="productImg" src="https://i.ebayimg.com/images/g/hI0AAOSwQi1cythG/s-l1200.jpg" alt="product image">                         
                             <div class="productDetails">
                                 <h4 class="fw-bold"> <?php echo $productName;?> </h4>
-                                <h5 class="fw-bold">Price</h5>
-                                <h5 class="fw-bold">Stonks</h5>
+                                <h5 class="fw-bold"> ₱<?php echo $productPrice;?> </h5>
+                                <h5 class="fw-bold"> <?php echo $productStocks;?> </h5>
                                 <div>
                                     <div class="d-flex mb-2">
                                         <input type="text" style="width: 60%; margin: 0 5px 0 0"/>
@@ -103,7 +91,7 @@
                             <img class="productImg" src="https://i.ebayimg.com/images/g/hI0AAOSwQi1cythG/s-l1200.jpg" alt="product image">
                             <div class="productDetails">
                                 <h4 class="fw-bold">Product #2</h4>
-                                <h5 class="fw-bold">Price</h5>
+                                <h5 class="fw-bold">productPrice</h5>
                                 <h5 class="fw-bold">Stonks</h5>
                                 <div>
                                     <div class="d-flex mb-2">

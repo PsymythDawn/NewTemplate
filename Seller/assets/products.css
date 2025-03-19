@@ -3,8 +3,14 @@
     height: auto; 
     border-radius: 10px; 
     background: #faf9f6;
-    padding: 25px;
+    padding: 15px 25px 25px 25px;
     border: 3px solid #5454547b;
+}
+.hrStyle {
+    height: 5px;
+    background: #000000;
+    margin: 20px 50px;
+    border-radius: 20px;
 }
 .categoryNavContainer {
     height: 40px;
@@ -66,21 +72,21 @@
     margin: 0px 0px 0px 20px;
 }*/
 .formSection {
-    margin: 30px 100px;
+    margin: 20px 50px 30px 50px;
 }
 .formRequired {
     color: #c21808;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bolder;
 }
 .formLabels {
     color: #545454;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 14px;
 }
 .inputtextForm {
-    width: 30%;
-    height: 60px;
+    width: 100%;
+    height: 50px;
     padding: 15px;
     border-radius: 10px;
     border: .5px solid #0000008c;
@@ -105,13 +111,13 @@
     border: 0px;
 }
 .descriptionInputForm {
-    width: 30%;
+    width: 100%;
     height: 150px;
     padding: 15px;
     border-radius: 10px;
 }
 .formMarginRight {
-    margin: 0 47% 0 0;
+    margin: 0 0 0 0;
 }
 #imgDropArea {
     text-align: center;
@@ -125,13 +131,13 @@
     padding: 20px;
 }*/
 #imgView {
-    width: 156px;
-    height: 156px;
+    width: 136px;
+    height: 136px;
     border: 3px dashed #817d7e;
-    background: #fff;
+    background: #fbfcff;
 }
 #imgView svg {
-    margin: 12.5% 39%;
+    margin: 21.5% 39% 0 39%;
 }
 
 #imgView span {

@@ -38,16 +38,20 @@
     <body>
         <main class="mainSection">
 
-            <div class="d-flex justify-content-between mb-3">
-                <h2 class="fw-bold">Add New Products</h2>
-            </div>
-            <div class="contentDiv">
-                
+            <div class="d-flex justify-content-between mb-1">
+                <h3 class="fw-bold">Add New Products</h3>
+
                 <!-- Alert Container -->
-                <div id="alert-container" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none; position: absolute; width: 96%;">
-                    <h2 class="text-center m-0 fw-bold" style="font-size: 22px;" id="alert-text"></h2>
+                <div id="alert-container" class="alert alert-success alert-dismissible fade show border border-danger" role="alert" style="display: none; position: absolute; width: 60%; top: -10px; right: 0; --bs-border-opacity: .25;">
+                    <h2 class="text-center m-0 fw-bold border-2" style="font-size: 18px;" id="alert-text"></h2>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
+            </div>
+
+            
+            <div class="contentDiv">
+                
+                
 
                 <script>
                     function getParameterByName(name) {
@@ -103,19 +107,28 @@
                     }
                 </style>
 
-                <h2 class="mx-5 my-3 fw-bold text-center" style="color: #545454">Product Information</h2>
-                <hr style="height: 5px; background: #545454"/>
+                <h3 class="fw-bold text-center" style="color: #545454">Product Information</h4>
+                <hr class="hrStyle"/>
 
                 <form action="actions/action-addnewproduct.php" method="POST">
                     <div class="formSection">
                         <div class="d-flex justify-content-between">
-                            <h4 class="formLabels"><span class="formRequired">*</span> Product Image/s</h4>
-                            <div style="width: 30%;" class="formMarginRight">
+                            <div style="width: 170px;">
+                                <h4 class="formLabels m-0"><span class="formRequired">*</span> Product Image/s</h4>
+                                <div style="padding: 0px 0 0 10px; color: #b1433969; border-left: 2px solid;">
+                                    <h6 style="font-size: 10.5px; color: #af1607ba;" class="text-start m-0 my-1 mt-2">Submit Image in <b>1:1 ratio</b></h6>
+                                    <h6 style="font-size: 10px; color: #af1607ba;" class="text-start m-0 my-1">example: <b>600px</b> by <b>600px</b></h6>
+                                    <h6 style="font-size: 10.5px; color: #af1607ba;" class="text-start m-0 my-1 mt-2">Supported Image type:</h6>
+                                    <h6 style="font-size: 10px; color: #af1607ba;" class="text-start m-0 my-1"><b>JPG</b>, <b>JPEG</b>, <b>PNG</b></h6>
+                                </div>    
+                            </div>
+                            
+                            <div style="width: 76%;" class="formMarginRight">
                                 <label for="addProductImage" id="imgDropArea" required>
                                     <input type="file" accept="image/*" id="addProductImage" name="productImg" hidden required>
                                     <div id="imgView" class="previewImg">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#817d7e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-upload"><path d="M12 13v8"/><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="m8 17 4-4 4 4"/></svg>
-                                        <p class="mt-1 fw-bold" style="color:#817d7e">Upload Product Image</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#817d7e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-upload"><path d="M12 13v8"/><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="m8 17 4-4 4 4"/></svg>
+                                        <p class="mt-1 fw-bold" style="color:#817d7e; font-size: 13px;">Upload Product Image</p>
                                     </div>
                                 </label>
                             </div>
@@ -129,7 +142,7 @@
                                     const reader = new FileReader();
                                     reader.onload = function(e) {
                                         const previewImg = document.getElementById('imgView');
-                                        previewImg.innerHTML = `<img src="${e.target.result}" alt="Product Image" style="height: 150px; width: auto;">`;
+                                        previewImg.innerHTML = `<img src="${e.target.result}" alt="Product Image" style="height: 130px; width: auto;">`;
                                     };
                                     reader.readAsDataURL(file);
                                 }
@@ -139,12 +152,14 @@
 
                     <div class="formSection d-flex justify-content-between">
                         <h4 class="formLabels"><span class="formRequired">*</span> Product Name</h4>
-                        <input type="text" class="inputtextForm formMarginRight" placeholder="Enter Product Name" name="productName" required>
+                        <div class="form-group" style="width: 76%;">
+                            <input type="text" class="inputtextForm formMarginRight" placeholder="Enter Product Name" name="productName" required>
+                        </div>
                     </div>
 
                     <div class="formSection d-flex justify-content-between">
                         <h4 class="formLabels"><span class="formRequired">*</span> Set Product Category</h4>
-                        <div style="width: 30%;" class="formMarginRight"> 
+                        <div style="width: 76%;" class="formMarginRight"> 
                             <select name="productCategory" class="selectForm">
                                 <option value="1">Uncategorized</option>
                                 <option value="2">Make up and Fragrances</option>
@@ -157,17 +172,23 @@
 
                     <div class="formSection d-flex justify-content-between">
                         <h4 class="formLabels"><span class="formRequired">*</span> Product Description</h4>
-                        <textarea class="descriptionInputForm formMarginRight" placeholder="Enter Product Description" name="productdescription" required></textarea>
+                        <div class="form-group" style="width: 76%;">
+                            <textarea class="descriptionInputForm formMarginRight" placeholder="Enter Product Description" name="productdescription" required></textarea>
+                        </div>
                     </div>
 
                     <div class="formSection d-flex justify-content-between">
                         <h4 class="formLabels"><span class="formRequired">*</span> Product Price (₱/Php)</h4>
-                        <input type="text" class="inputtextForm formMarginRight" placeholder="Enter Product Price" name="productprice" required>
+                        <div class="form-group" style="width: 76%;">
+                            <input type="text" class="inputtextForm formMarginRight" placeholder="Enter Product Price" name="productprice" required>
+                        </div>
                     </div>
 
                     <div class="formSection d-flex justify-content-between">
                         <h4 class="formLabels"><span class="formRequired">*</span> Product Stocks</h4>
-                        <input type="text" class="inputtextForm formMarginRight" placeholder="Enter Product Stocks" name="productstocks" required>
+                        <div class="form-group" style="width: 76%;">
+                            <input type="text" class="inputtextForm formMarginRight" placeholder="Enter Product Stocks" name="productstocks" required>
+                        </div>
                     </div>
 
                     <div style="justify-content: flex-end; display: flex;" class="formSection">
