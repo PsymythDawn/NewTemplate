@@ -25,7 +25,7 @@ if (!defined('WEB_ROOT')) {
 
 
 <body>
-    
+
     <?php include ($_SERVER["DOCUMENT_ROOT"] . '/' . $sett_data['directory'] . '/include/preload.php'); ?>
 
 	<div>

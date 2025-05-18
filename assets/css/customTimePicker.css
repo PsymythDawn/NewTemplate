@@ -1,0 +1,152 @@
+.time-picker-container {
+            position: relative;
+        }
+
+        .inputStyle {
+            border-radius: 10px;
+            padding: 10px 15px;
+            border: 1px solid #e1e1e1;
+        }
+
+        .custom-time {
+            border-radius: 10px;
+            border: 1px solid #e1e1e1;
+            background-color: white;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .time-icon {
+            color: #20c997;
+            margin-right: 10px;
+        }
+
+        .time-dropdown {
+            position: absolute;
+            z-index: 1000;
+            width: 250px;
+            max-width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 1px solid #e1e1e1;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Label for hours and minutes */
+        .time-label {
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .time-label span {
+            width: 50%;
+            text-align: center;
+        }
+
+        /* Time roulette container */
+        .time-roulette {
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 10px;
+            border-top: 1px solid #e1e1e1;
+            border-bottom: 1px solid #e1e1e1;
+        }
+
+        /* Time column (hours and minutes) */
+        .time-column {
+            flex: 1;
+            height: 200px;
+            overflow-y: auto;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+            text-align: center;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .time-column::-webkit-scrollbar {
+            display: none;
+        }
+
+        .time-item {
+            padding: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .time-item.selected {
+            color: #20c997;
+            font-weight: bold;
+        }
+
+        /* Highlight the middle area for selection */
+        .selection-highlight {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            height: 40px;
+            background-color: rgba(32, 201, 151, 0.1);
+            pointer-events: none;
+            border-top: 1px solid rgba(32, 201, 151, 0.3);
+            border-bottom: 1px solid rgba(32, 201, 151, 0.3);
+        }
+
+        /* AM/PM toggle */
+        .am-pm-toggle {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .am-pm-btn {
+            padding: 5px 20px;
+            background-color: white;
+            border: 1px solid #e1e1e1;
+            color: #333;
+        }
+
+        .am-pm-btn:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .am-pm-btn:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .am-pm-btn.active {
+            background-color: #20c997;
+            color: white;
+            border-color: #20c997;
+        }
+
+        /* Set time button */
+        .set-time-btn {
+            background-color: #20c997;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .set-time-btn:hover {
+            background-color: #1cb386;
+        }
+
+        /* Hide native time input */
+        input[type="time"] {
+            display: none;
+        }

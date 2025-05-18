@@ -1,0 +1,121 @@
+
+
+/*
+  Web Orientation References:
+  
+  ~ Smart Phone Orientations:
+    - Small phones: @media (max-width: 320px)
+    - Medium phones: @media (max-width: 375px)
+    - Large phones: @media (max-width: 425px)
+  ~ Sm tablets: @media (max-width: 768px)
+  ~ laptops: @media (max-width: 1024px)
+  - Lg desktops: @media (max-width: 1200px)
+  ~ 4k Resolution: @media (max-width: 2560px)
+*/
+
+/* Modern lg Smartphones and Small/Mini Tablets Responsive Portrait Orientation */
+@media screen and (max-width: 768px) {
+    .MobileViewOnly {
+        display: block !important;
+    }
+    #sampleRoamHeader {
+        display: none;
+    }
+    #roamVideoMontageSection {
+        display: none;
+    }
+
+    .card.CustomCardWidth {
+        flex: 0 0 100% !important; /* Force 100% width */
+        max-width: 100% !important;
+        margin-left: 0;
+        margin-right: 0;
+    }
+      
+    /* Add some space between the stacked cards */
+    .row > .CustomCardWidth {
+      margin-bottom: 20px;
+    }
+
+    .customPaddingMobile {
+      /*padding: 0 8.8% !important;*/
+    }
+
+    /* Mobile Bottom Navigation */
+    .mobile-bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-around;
+      background-color: white;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      height: 60px;
+      padding: 5px 0;
+    }
+
+    .mobile-bottom-nav__item {
+      flex: 1;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .mobile-bottom-nav__item-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mobile-bottom-nav__item i {
+      font-size: 20px;
+    }
+
+    .mobile-bottom-nav__item span {
+      font-size: 12px;
+    }
+
+    .mobile-bottom-nav__item.active {
+      color: #1fb69c; /* Your teal active color */
+    }
+
+    .hoveringActive:hover {
+      color: #1fb69c; /* Your teal hover color */
+    }
+
+    /* Only show the nav on mobile */
+    @media (min-width: 768px) {
+      .mobile-bottom-nav {
+        display: none;
+      }
+    }
+
+    /* Add padding to the bottom of your content container */
+    body {
+      padding-bottom: 70px !important; /* A bit more than the nav height */
+    }
+
+}
+
+/* Mid-Large Tablet devices Portrait Orientation - 2 cards per row */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .card.CustomCardWidth {
+      flex: 0 0 calc(50% - 20px) !important; /* 50% width minus margins */
+      max-width: calc(50% - 20px) !important;
+    }
+  }
+  
+  /* For better card spacing across all devices */
+  .row.justify-content-center {
+    margin: 0 -10px; /* Compensate for card margins */
+  }
+
+/* sm Laptop - Large Desktop View / Default View on web */
+@media (min-width: 1024px) {
+    .CustomCardWidth {
+      width: 23% !important;
+    }
+}

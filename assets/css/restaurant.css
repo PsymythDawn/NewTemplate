@@ -1,0 +1,33 @@
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    scroll-behavior: smooth;
+}
+.tf-container {
+    max-width: 1320px;
+    width: 100%;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 120px;
+}
+.card_hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+.card_hover:hover {
+    transform: translateY(-2px) scale(1.001);
+    box-shadow: 3px 5px 7px 1px rgb(31 182 156 / 33%);
+    z-index: 10;
+    border: 1px solid #c0d5d0; 
+}
+
+.restoInfoIcon {
+    width: 25px; 
+    height: 25px;
+    margin-right: .5rem !important;
+}

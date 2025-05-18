@@ -1,0 +1,115 @@
+.containerGuests {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .input-containerGuests {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-label {
+      display: block;
+      margin-bottom: 8px;
+      text-align: left;
+      font-size: 14px;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .roulette-container {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+
+    .roulette-container.active {
+      display: block;
+      max-width: 300px;
+      margin: 14px auto;
+    }
+
+    .roulette-header {
+      padding: 15px;
+      color: #555;
+      font-weight: 500;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .roulette-track {
+      height: 200px;
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .roulette-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .roulette-item {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      scroll-snap-align: center;
+      color: #333;
+    }
+
+    .roulette-item.selected {
+      background-color: #e6f9f4;
+      color: #39c9a9;
+      font-weight: 600;
+      font-size: 22px;
+    }
+
+    .selection-indicator {
+      position: absolute;
+      top: 80px; /* 2 * item height */
+      left: 0;
+      right: 0;
+      height: 40px;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .selection-indicator::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 40px;
+      background-color: #e6f9f4;
+      z-index: -1;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+
+    .roulette-footer {
+      padding: 10px;
+      border-top: 1px solid #eee;
+      text-align: center;
+    }
+
+    .ok-btn {
+      background-color: #39c9a9;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 80px;
+    }

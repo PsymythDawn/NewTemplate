@@ -21,7 +21,7 @@ $today_a = date("a");
 $dbHost = 'localhost';
 $dbUser = 'root';
 $dbPass = '';
-$dbName = 'db_app';
+$dbName = 'roam_resto_db';
 
 try {
     

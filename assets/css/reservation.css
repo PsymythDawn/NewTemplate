@@ -1,0 +1,26 @@
+/* INPUT Design */
+
+.inputStyle {
+    border: 2px solid #9999992e;
+    border-radius: 5px !important;
+    background-color: #fff;
+    height: 50px !important;
+}
+
+.inputStyle:focus {
+    border-color: #25b199;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem #25b19a4d;
+}
+
+.inputStyleALT {
+    border: 2px solid #25b19961;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.inputStyleALT:focus {
+    border-color: #25b19961;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem #25b19a1c;
+}
